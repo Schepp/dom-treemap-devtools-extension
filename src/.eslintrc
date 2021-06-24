@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true,
+    "node": true,
+    "serviceworker": true
+  },
+  "globals": {
+    "workbox": true
+  },
+  "plugins": [
+    "compat",
+    "no-storage"
+  ],
+  "rules": {
+    "no-console": "off",
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "import/no-extraneous-dependencies": "off",
+    "comma-dangle": ["error", "always-multiline"],
+    "linebreak-style": "off",
+    "compat/compat": "off",
+    "no-storage/no-browser-storage": 2
+  }
+}

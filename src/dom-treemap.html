@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+  <script src="d3.js"></script>
+  <script src="dom-treemap.js" defer></script>
+  <style>
+    .-theme-with-dark-background {
+      color: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        color: #fff;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="treemap"></div>
+<p>Descendant node distribution amongst the direct children of the currently selected node. Click on a leaf to drill yourself down the DOM tree.</p>
+</body>
+</html>

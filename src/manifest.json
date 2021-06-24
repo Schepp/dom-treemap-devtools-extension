@@ -1,0 +1,18 @@
+{
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "name": "DOM Treemap",
+  "version": "1.0.0",
+  "description": "Helps you explore the distribution of DOM nodes in the document tree.",
+  "devtools_page": "devtools.html",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "manifest_version": 3
+}
