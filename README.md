@@ -1,6 +1,6 @@
 # DOM Treemap
 
-A Chrome Devtools extension that helps you explore the distribution of DOM nodes in the document tree.
+A [Chrome Devtools extension](https://chrome.google.com/webstore/detail/dom-treemap/albnoggfgnooeefdjpncieecohhblonh) that helps you explore the distribution of DOM nodes in the document tree.
 
 ![](promo-material/promo-large.png)
 
@@ -13,3 +13,5 @@ On top of that there is a second panel for all those BEM affiniciados which visu
 ![](promo-material/promo-screenshot-1.png)
 
 ![](promo-material/promo-screenshot-2.png)
+
+[DOM Treemap in the Chrome Web Store](https://chrome.google.com/webstore/detail/dom-treemap/albnoggfgnooeefdjpncieecohhblonh?hl=de) 
