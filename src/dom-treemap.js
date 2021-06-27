@@ -1,6 +1,11 @@
 function constructData(elem) {
   function getDomPath(elem, depth) {
     var stack = [];
+
+    if (elem === document.documentElement) {
+      return[':root'];
+    }
+
     while (elem.parentNode != null) {
       var sibCount = 0;
       var sibIndex = 0;
@@ -151,6 +156,7 @@ function updateTreeMap() {
         const svg = treemap(data);
         const oldSvg = document.getElementById('treemap').querySelector('svg');
 
+        document.getElementById('selected-element').textContent = data.name;
         document.getElementById('treemap')[oldSvg ? 'replaceChild' : 'appendChild'](svg, oldSvg);
       }
     );
@@ -159,6 +165,7 @@ function updateTreeMap() {
     const svg = treemap(data);
     const oldSvg = document.getElementById('treemap').querySelector('svg');
 
+    document.getElementById('selected-element').textContent = data.name;
     document.getElementById('treemap')[oldSvg ? 'replaceChild' : 'appendChild'](svg, oldSvg);
   }
 }
@@ -167,6 +174,16 @@ updateTreeMap();
 
 window.addEventListener('resize', () => {
   updateTreeMap();
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('button')) {
+    return;
+  }
+
+  const evalExpression = `if ($0 !== document.documentElement) inspect($0.parentElement)`;
+
+  chrome.devtools.inspectedWindow.eval(evalExpression);
 });
 
 if (typeof chrome !== 'undefined' && chrome.devtools) {

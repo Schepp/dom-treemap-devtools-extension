@@ -2,6 +2,4 @@ chrome.devtools.panels.elements.createSidebarPane('DOM Treemap', function(sideba
 	sidebar.setPage('dom-treemap.html');
 });
 
-chrome.devtools.panels.elements.createSidebarPane('BEM Component Stats', function(sidebar) {
-	sidebar.setPage('component-stats.html');
-});
+chrome.devtools.panels.create('BEM Component Stats', 'icon128.png', 'component-stats.html');
